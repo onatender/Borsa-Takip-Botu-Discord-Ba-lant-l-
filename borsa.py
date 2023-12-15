@@ -55,7 +55,7 @@ while True:
         text = f"{hisse.hisse_code}:{hisse.oldValue} → {hisse.newValue}"
         if float(hisse.newValue) < float(hisse.oldValue):
             print(Fore.RED,text," hisse düştü")
-            if hisse.hisse_code != 'ENERYaa': send_message(f"@everyone {text}")
+            send_message(f"@everyone {text}")
         elif float(hisse.newValue) == float(hisse.oldValue):
             print(Fore.WHITE,text," değişiklik yok")
         elif float(hisse.newValue) > float(hisse.oldValue):
